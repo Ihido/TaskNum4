@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class TaskNumber4 {
+class TaskNumber4 extends RomanNumbers{
 
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
