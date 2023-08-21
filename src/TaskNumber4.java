@@ -17,7 +17,6 @@ class TaskNumber4 extends RomanNumbers{
         String[] operands = expression.split("[+\\-*/]"); // знак минус считываем с консоли, поэтому "\\"
         if (operands.length != 2) throw new Exception("Ошибка, т.к. строка не является математической операцией!");
         operation = define(expression);
-        if (operation == null) throw new Exception("Неподдерживаемая математическая операция");
         if (RomanNumber.isRoman(operands[0]) && RomanNumber.isRoman(operands[1])) {
             operand1 = RomanNumber.convertAr(operands[0]);
             operand2 = RomanNumber.convertAr(operands[1]);
