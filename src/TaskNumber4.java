@@ -17,12 +17,12 @@ class TaskNumber4 extends RomanNumbers{
         String[] operands = expression.split("[+\\-*/]"); // знак минус считываем с консоли, поэтому "\\"
         if (operands.length != 2) throw new Exception("Ошибка, т.к. строка не является математической операцией!");
         operation = define(expression);
-        if (RomanNumber.isRoman(operands[0]) && RomanNumber.isRoman(operands[1])) {
-            operand1 = RomanNumber.convertAr(operands[0]);
-            operand2 = RomanNumber.convertAr(operands[1]);
+        if (RomanNumbers.isRoman(operands[0]) && RomanNumbers.isRoman(operands[1])) {
+            operand1 = RomanNumbers.convertAr(operands[0]);
+            operand2 = RomanNumbers.convertAr(operands[1]);
             isRoman = true;
         }
-        else if (!RomanNumber.isRoman(operands[0]) && !RomanNumber.isRoman(operands[1])) {
+        else if (!RomanNumbers.isRoman(operands[0]) && !RomanNumbers.isRoman(operands[1])) {
             operand1  = Integer.parseInt(operands[0]);
             operand2 = Integer.parseInt(operands[1]);
             isRoman = false;
@@ -38,7 +38,7 @@ class TaskNumber4 extends RomanNumbers{
             if (arabian <= 0) {
                 throw new Exception("Используются одновременно разные системы счисления!");
             }
-            result = RomanNumber.convertRom(arabian);
+            result = RomanNumbers.convertRom(arabian);
         } else {
             result = String.valueOf(arabian);
         }
