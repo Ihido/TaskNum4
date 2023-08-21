@@ -60,5 +60,4 @@ class TaskNumber4 extends RomanNumbers{
         else if (oper.equals("*")) return a * b;
         else return a / b;
     }
-
 }
