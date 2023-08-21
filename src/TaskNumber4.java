@@ -28,7 +28,7 @@ class TaskNumber4 extends RomanNumbers{
             isRoman = false;
         }
         else {
-            throw new Exception("Числа используются одновременно разные системы счисления!");
+            throw new Exception("Используются одновременно разные системы счисления!");
         }
         if (operand1 > 10 || operand2 > 10) {
             throw new Exception("Калькулятор принимает на вход числа от 1 до 10 включительно, не более!");
@@ -36,7 +36,7 @@ class TaskNumber4 extends RomanNumbers{
         int arabian = calc(operand1 , operand2, operation);
         if (isRoman) {
             if (arabian <= 0) {
-                throw new Exception("Числа используются одновременно разные системы счисления!");
+                throw new Exception("Используются одновременно разные системы счисления!");
             }
             result = RomanNumber.convertRom(arabian);
         } else {
